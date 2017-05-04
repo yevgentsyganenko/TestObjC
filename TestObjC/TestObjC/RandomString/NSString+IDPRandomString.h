@@ -8,8 +8,6 @@
 
 #import <Foundation/Foundation.h>
 
-#import "NSString+IDPAlphabet.h"
-
 @interface NSString (IDPRandomString)
 
 + (instancetype)randomString;

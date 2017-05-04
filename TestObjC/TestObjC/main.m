@@ -8,11 +8,11 @@
 
 #import <Foundation/Foundation.h>
 
-#import "NSString+IDPRandomString.h"
+#import "IDPCreatureTest.h"
 
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
-        NSLog(@"%@", [NSString randomStringWithAlphabet:[NSString alphabetWithType:IDPUppercaseLettersAlphabet]]);
+        [IDPCreatureTest performTest];
     }
     
     return 0;

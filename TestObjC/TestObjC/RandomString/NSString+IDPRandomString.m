@@ -8,6 +8,8 @@
 
 #import "NSString+IDPRandomString.h"
 
+#import "NSString+IDPAlphabet.h"
+
 static const NSUInteger IDPDefaultCharactersLength = 10;
 
 @implementation NSString (IDPRandomString)
