@@ -9,10 +9,12 @@
 #import <Foundation/Foundation.h>
 
 #import "IDPCreatureTest.h"
+#import "IDPCreature2Test.h"
 
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
-        [IDPCreatureTest performTest];
+//        [IDPCreatureTest performTest];
+        [IDPCreature2Test performTest];
     }
     
     return 0;

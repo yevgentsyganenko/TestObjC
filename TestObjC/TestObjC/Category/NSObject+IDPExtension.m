@@ -10,8 +10,8 @@
 
 @implementation NSObject (IDPExtension)
 
-- (instancetype)object {
-    return [[[self alloc] init] autorelease];
++ (instancetype)object {
+    return [[self new] autorelease];
 }
 
 @end

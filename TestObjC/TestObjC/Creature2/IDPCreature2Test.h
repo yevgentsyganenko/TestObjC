@@ -1,5 +1,5 @@
 //
-//  NSObject+IDPExtension.h
+//  IDPCreature2Test.h
 //  TestObjC
 //
 //  Created by Genek on 5/4/17.
@@ -8,8 +8,8 @@
 
 #import <Foundation/Foundation.h>
 
-@interface NSObject (IDPExtension)
+@interface IDPCreature2Test : NSObject
 
-+ (instancetype)object;
++ (void)performTest;
 
 @end

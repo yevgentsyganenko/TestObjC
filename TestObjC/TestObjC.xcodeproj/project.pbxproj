@@ -10,6 +10,10 @@
 		1058E8C51EBB14A200635A1B /* IDPCreature.m in Sources */ = {isa = PBXBuildFile; fileRef = 1058E8C41EBB14A200635A1B /* IDPCreature.m */; };
 		1058E8C81EBB1ED700635A1B /* IDPCreatureTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 1058E8C71EBB1ED700635A1B /* IDPCreatureTest.m */; };
 		1058E8CC1EBB2C2300635A1B /* NSObject+IDPExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 1058E8CB1EBB2C2300635A1B /* NSObject+IDPExtension.m */; };
+		1058E8D61EBB6C3F00635A1B /* IDPCreature2.m in Sources */ = {isa = PBXBuildFile; fileRef = 1058E8D51EBB6C3F00635A1B /* IDPCreature2.m */; };
+		1058E8D91EBB6C9C00635A1B /* IDPCreatureMale.m in Sources */ = {isa = PBXBuildFile; fileRef = 1058E8D81EBB6C9C00635A1B /* IDPCreatureMale.m */; };
+		1058E8DC1EBB6CAA00635A1B /* IDPCreatureFemale.m in Sources */ = {isa = PBXBuildFile; fileRef = 1058E8DB1EBB6CAA00635A1B /* IDPCreatureFemale.m */; };
+		1058E8DF1EBB6F5600635A1B /* IDPCreature2Test.m in Sources */ = {isa = PBXBuildFile; fileRef = 1058E8DE1EBB6F5600635A1B /* IDPCreature2Test.m */; };
 		10A54D841EB9C70D003F2BFD /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 10A54D831EB9C70D003F2BFD /* main.m */; };
 		10A54D951EB9C9CC003F2BFD /* NSString+IDPRandomString.m in Sources */ = {isa = PBXBuildFile; fileRef = 10A54D941EB9C9CC003F2BFD /* NSString+IDPRandomString.m */; };
 		10A54D981EB9E0C2003F2BFD /* NSString+IDPAlphabet.m in Sources */ = {isa = PBXBuildFile; fileRef = 10A54D971EB9E0C2003F2BFD /* NSString+IDPAlphabet.m */; };
@@ -34,6 +38,14 @@
 		1058E8C71EBB1ED700635A1B /* IDPCreatureTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IDPCreatureTest.m; sourceTree = "<group>"; };
 		1058E8CA1EBB2C2300635A1B /* NSObject+IDPExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+IDPExtension.h"; sourceTree = "<group>"; };
 		1058E8CB1EBB2C2300635A1B /* NSObject+IDPExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+IDPExtension.m"; sourceTree = "<group>"; };
+		1058E8D41EBB6C3F00635A1B /* IDPCreature2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IDPCreature2.h; sourceTree = "<group>"; };
+		1058E8D51EBB6C3F00635A1B /* IDPCreature2.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IDPCreature2.m; sourceTree = "<group>"; };
+		1058E8D71EBB6C9C00635A1B /* IDPCreatureMale.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IDPCreatureMale.h; sourceTree = "<group>"; };
+		1058E8D81EBB6C9C00635A1B /* IDPCreatureMale.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IDPCreatureMale.m; sourceTree = "<group>"; };
+		1058E8DA1EBB6CAA00635A1B /* IDPCreatureFemale.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IDPCreatureFemale.h; sourceTree = "<group>"; };
+		1058E8DB1EBB6CAA00635A1B /* IDPCreatureFemale.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IDPCreatureFemale.m; sourceTree = "<group>"; };
+		1058E8DD1EBB6F5600635A1B /* IDPCreature2Test.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IDPCreature2Test.h; sourceTree = "<group>"; };
+		1058E8DE1EBB6F5600635A1B /* IDPCreature2Test.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IDPCreature2Test.m; sourceTree = "<group>"; };
 		10A54D801EB9C70D003F2BFD /* TestObjC */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = TestObjC; sourceTree = BUILT_PRODUCTS_DIR; };
 		10A54D831EB9C70D003F2BFD /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		10A54D931EB9C9CC003F2BFD /* NSString+IDPRandomString.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+IDPRandomString.h"; sourceTree = "<group>"; };
@@ -73,6 +85,21 @@
 			path = Category;
 			sourceTree = "<group>";
 		};
+		1058E8D31EBB60FE00635A1B /* Creature2 */ = {
+			isa = PBXGroup;
+			children = (
+				1058E8D41EBB6C3F00635A1B /* IDPCreature2.h */,
+				1058E8D51EBB6C3F00635A1B /* IDPCreature2.m */,
+				1058E8D71EBB6C9C00635A1B /* IDPCreatureMale.h */,
+				1058E8D81EBB6C9C00635A1B /* IDPCreatureMale.m */,
+				1058E8DA1EBB6CAA00635A1B /* IDPCreatureFemale.h */,
+				1058E8DB1EBB6CAA00635A1B /* IDPCreatureFemale.m */,
+				1058E8DD1EBB6F5600635A1B /* IDPCreature2Test.h */,
+				1058E8DE1EBB6F5600635A1B /* IDPCreature2Test.m */,
+			);
+			path = Creature2;
+			sourceTree = "<group>";
+		};
 		10A54D771EB9C70D003F2BFD = {
 			isa = PBXGroup;
 			children = (
@@ -94,6 +121,7 @@
 			children = (
 				1058E8C91EBB2BAF00635A1B /* Category */,
 				1058E8BF1EBB13E300635A1B /* Creature */,
+				1058E8D31EBB60FE00635A1B /* Creature2 */,
 				10A54D8A1EB9C75D003F2BFD /* RandomString */,
 				10A54D831EB9C70D003F2BFD /* main.m */,
 			);
@@ -172,9 +200,13 @@
 				1058E8C51EBB14A200635A1B /* IDPCreature.m in Sources */,
 				1058E8C81EBB1ED700635A1B /* IDPCreatureTest.m in Sources */,
 				10A54D841EB9C70D003F2BFD /* main.m in Sources */,
+				1058E8D91EBB6C9C00635A1B /* IDPCreatureMale.m in Sources */,
 				10A54D981EB9E0C2003F2BFD /* NSString+IDPAlphabet.m in Sources */,
+				1058E8D61EBB6C3F00635A1B /* IDPCreature2.m in Sources */,
 				10A54D951EB9C9CC003F2BFD /* NSString+IDPRandomString.m in Sources */,
 				1058E8CC1EBB2C2300635A1B /* NSObject+IDPExtension.m in Sources */,
+				1058E8DC1EBB6CAA00635A1B /* IDPCreatureFemale.m in Sources */,
+				1058E8DF1EBB6F5600635A1B /* IDPCreature2Test.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

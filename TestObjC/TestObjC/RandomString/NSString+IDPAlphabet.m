@@ -8,6 +8,8 @@
 
 #import "NSString+IDPAlphabet.h"
 
+#import "NSObject+IDPExtension.h"
+
 @interface NSString ()
 
 + (instancetype)alphabetWithRange:(NSRange)range;
@@ -42,7 +44,7 @@
 }
 
 + (instancetype)alphabetWithRange:(NSRange)range {
-    NSMutableString *result = [NSMutableString new];
+    NSMutableString *result = [NSMutableString object];
     unichar lastCharacter = NSMaxRange(range);
 
     for (unichar character = range.location; character < lastCharacter; character++) {
