@@ -28,11 +28,10 @@
 #pragma mark Public
 
 + (void)performTest {
-    NSUInteger maleCount = 10;
-    NSUInteger femaleCount = 10;
-    NSMutableArray *creatures = [NSMutableArray arrayWithCapacity:maleCount + femaleCount];
+    NSUInteger count = 10;
+    NSMutableArray *creatures = [NSMutableArray arrayWithCapacity:count];
     
-    for (NSUInteger index = 0; index < maleCount; index++) {
+    for (NSUInteger index = 0; index < count; index++) {
         NSString *name = [[NSString randomStringWithAlphabet:[NSString alphabetWithType:IDPLowercaseLettersAlphabet]] capitalizedString];
         NSUInteger weight = arc4random_uniform(120) + 40;
         NSUInteger age = arc4random_uniform(100) + 18;
