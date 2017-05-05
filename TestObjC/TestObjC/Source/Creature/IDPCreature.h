@@ -9,6 +9,7 @@
 #import <Foundation/Foundation.h>
 
 typedef NS_ENUM(NSUInteger, IDPGender) {
+    IDPGenderNone,
     IDPGenderMale,
     IDPGenderFemale
 };
@@ -30,13 +31,15 @@ typedef NS_ENUM(NSUInteger, IDPGender) {
                             weight:(NSUInteger)weight
                                age:(NSUInteger)age;
 
+- (instancetype)init;
+
 - (instancetype)initWithGender:(IDPGender)gender
                           name:(NSString *)name;
 
 - (instancetype)initWithGender:(IDPGender)gender
                           name:(NSString *)name
                         weight:(NSUInteger)weight
-                           age:(NSUInteger)age;
+                           age:(NSUInteger)age NS_DESIGNATED_INITIALIZER;
 
 - (void)addChild:(IDPCreature *)child;
 - (void)removeChild:(IDPCreature *)child;

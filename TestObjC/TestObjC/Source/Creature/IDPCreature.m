@@ -55,6 +55,10 @@ static NSString * const _Nonnull IDPCreatureDescriptionFormatString     = @"IDPC
     [super dealloc];
 }
 
+- (instancetype)init {
+    return [self initWithGender:IDPGenderNone name:nil];
+}
+
 - (instancetype)initWithGender:(IDPGender)gender
                           name:(NSString *)name
 {

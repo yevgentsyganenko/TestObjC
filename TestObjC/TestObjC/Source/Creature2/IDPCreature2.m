@@ -51,6 +51,10 @@ static NSString * const _Nonnull IDPCreatureDescriptionFormatString     = @"%@, 
     [super dealloc];
 }
 
+- (instancetype)init {
+    return [self initWithName:nil];
+}
+
 - (instancetype)initWithName:(NSString *)name {
     return [self initWithName:name weight:0 age:0];
 }

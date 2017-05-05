@@ -8,6 +8,8 @@
 
 #import "IDPCreatureFemale.h"
 
+#import "NSObject+IDPExtension.h"
+
 @interface IDPCreatureFemale ()
 
 - (IDPCreature2 *)giveBirth;

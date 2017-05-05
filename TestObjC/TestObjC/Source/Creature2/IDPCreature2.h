@@ -22,11 +22,12 @@
                           weight:(NSUInteger)weight
                              age:(NSUInteger)age;
 
+- (instancetype)init;
 - (instancetype)initWithName:(NSString *)name;
 
 - (instancetype)initWithName:(NSString *)name
                       weight:(NSUInteger)weight
-                         age:(NSUInteger)age;
+                         age:(NSUInteger)age NS_DESIGNATED_INITIALIZER;
 
 - (void)addChild:(IDPCreature2 *)child;
 - (void)removeChild:(IDPCreature2 *)child;

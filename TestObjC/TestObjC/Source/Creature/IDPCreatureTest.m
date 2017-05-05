@@ -43,6 +43,9 @@
             case IDPGenderFemale:
                 [creature giveBirth];
                 break;
+                
+            default:
+                break;
         }
     }
 }
