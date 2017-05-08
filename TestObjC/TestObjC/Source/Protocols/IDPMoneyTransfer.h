@@ -1,5 +1,5 @@
 //
-//  IDPTakeMoneyProtocol.h
+//  IDPMoneyTransfer.h
 //  TestObjC
 //
 //  Created by Genek on 5/5/17.
@@ -8,8 +8,8 @@
 
 #import <Foundation/Foundation.h>
 
-@protocol IDPTakeMoneyProtocol <NSObject>
+@protocol IDPMoneyTransfer <NSObject>
 
-- (void)takeMoney:(NSUInteger)money fromObject:(id<IDPMoneyProtocol>)object;
+- (void)takeMoney:(NSUInteger)money fromObject:(id<IDPMoney>)object;
 
 @end

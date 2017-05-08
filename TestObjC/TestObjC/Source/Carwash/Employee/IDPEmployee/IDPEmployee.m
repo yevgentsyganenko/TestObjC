@@ -13,6 +13,10 @@
 #pragma mark -
 #pragma mark Class Methods
 
++ (instancetype)employeeWithName:(NSString *)name {
+    return [self employeeWithName:name experience:0 salary:0 money:0];
+}
+
 + (instancetype)employeeWithName:(NSString *)name
                       experience:(NSUInteger)experience
                           salary:(NSUInteger)salary
@@ -31,7 +35,11 @@
 }
 
 - (instancetype)init {
-    return [self initWithName:nil experience:0 salary:0 money:0];
+    return [self initWithName:nil];
+}
+
+- (instancetype)initWithName:(NSString *)name {
+    return [self initWithName:name experience:0 salary:0 money:0];
 }
 
 - (instancetype)initWithName:(NSString *)name
@@ -51,15 +59,22 @@
 }
 
 #pragma mark -
-#pragma mark IDPTakeMoneyProtocol
+#pragma mark IDPMoneyTransfer
 
-- (void)takeMoney:(NSUInteger)money fromObject:(id<IDPMoneyProtocol>)object {
-    self.money += money;
-    object.money -= money;
+- (void)takeMoney:(NSUInteger)money fromObject:(id<IDPMoney>)object {
+    if (money <= object.money) {
+        self.money += money;
+        object.money -= money;
+    }
 }
 
 #pragma mark -
 #pragma mark Public
+
+- (void)processObject:(id<IDPMoney>)object {
+    [self takeMoney:object.money fromObject:object];
+    [self performWorkWithObject:object];
+}
 
 - (void)performWorkWithObject:(id)object {
     

@@ -8,14 +8,14 @@
 
 #import <Foundation/Foundation.h>
 
-#import "IDPMoneyProtocol.h"
+#import "IDPMoney.h"
 
 typedef NS_ENUM(NSUInteger, IDPCarState) {
     IDPCarStateDirty,
     IDPCarStateClean
 };
 
-@interface IDPCar : NSObject <IDPMoneyProtocol>
+@interface IDPCar : NSObject <IDPMoney>
 @property (nonatomic, copy)     NSString        *model;
 @property (nonatomic, assign)   NSUInteger      money;
 @property (nonatomic, assign)   IDPCarState     state;

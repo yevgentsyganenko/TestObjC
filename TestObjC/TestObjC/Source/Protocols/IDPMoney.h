@@ -1,5 +1,5 @@
 //
-//  IDPMoneyProtocol.h
+//  IDPMoney.h
 //  TestObjC
 //
 //  Created by Genek on 5/5/17.
@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@protocol IDPMoneyProtocol <NSObject>
+@protocol IDPMoney <NSObject>
 @property (nonatomic, assign)   NSUInteger  money;
 
 @end

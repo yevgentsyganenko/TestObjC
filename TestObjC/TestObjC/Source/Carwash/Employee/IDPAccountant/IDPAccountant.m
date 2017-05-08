@@ -8,6 +8,22 @@
 
 #import "IDPAccountant.h"
 
+#import "IDPWasher.h"
+
 @implementation IDPAccountant
+
+#pragma mark -
+#pragma mark Overridden
+
+- (void)performWorkWithObject:(IDPWasher *)washer {
+    [self calculateMoney:washer.money];
+}
+
+#pragma mark -
+#pragma mark Public
+
+- (void)calculateMoney:(NSUInteger)money {
+    NSLog(@"Accountant %@ calculated money: %lu", self.name, money);
+}
 
 @end

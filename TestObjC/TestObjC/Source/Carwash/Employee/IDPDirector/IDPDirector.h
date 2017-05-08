@@ -12,4 +12,6 @@
 
 @interface IDPDirector : IDPEmployee
 
+- (void)makeProfit;
+
 @end

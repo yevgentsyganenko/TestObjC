@@ -8,10 +8,18 @@
 
 #import "NSObject+IDPExtension.h"
 
+#import "NSArray+IDPExtensions.h"
+
 @implementation NSObject (IDPExtension)
 
 + (instancetype)object {
     return [[self new] autorelease];
+}
+
++ (NSArray *)objectsWithCount:(NSUInteger)count {
+    return [NSArray arrayWithCount:count factory:^id {
+        return [self object];
+    }];
 }
 
 @end

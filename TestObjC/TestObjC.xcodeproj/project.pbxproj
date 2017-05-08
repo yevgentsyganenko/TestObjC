@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1037E8331EC07AAA0024AFCC /* NSArray+IDPExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 1037E8321EC07AAA0024AFCC /* NSArray+IDPExtensions.m */; };
+		1037E83A1EC09A9B0024AFCC /* IDPEnterpriseTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 1037E8391EC09A9B0024AFCC /* IDPEnterpriseTest.m */; };
+		1037E83B1EC09CE40024AFCC /* IDPEnterprise.m in Sources */ = {isa = PBXBuildFile; fileRef = 1037E8361EC09A8E0024AFCC /* IDPEnterprise.m */; };
 		10A54D841EB9C70D003F2BFD /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 10A54D831EB9C70D003F2BFD /* main.m */; };
 		10FF6F6E1EBC5E0A00C6E9A4 /* IDPCreature2.m in Sources */ = {isa = PBXBuildFile; fileRef = 10FF6F621EBC5DEB00C6E9A4 /* IDPCreature2.m */; };
 		10FF6F6F1EBC5E1800C6E9A4 /* IDPAdministration.m in Sources */ = {isa = PBXBuildFile; fileRef = 10FF6F391EBC5DEB00C6E9A4 /* IDPAdministration.m */; };
@@ -42,6 +45,14 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		1037E82B1EC068EA0024AFCC /* IDPMoney.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IDPMoney.h; sourceTree = "<group>"; };
+		1037E82C1EC068EA0024AFCC /* IDPMoneyTransfer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IDPMoneyTransfer.h; sourceTree = "<group>"; };
+		1037E8311EC07AAA0024AFCC /* NSArray+IDPExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+IDPExtensions.h"; sourceTree = "<group>"; };
+		1037E8321EC07AAA0024AFCC /* NSArray+IDPExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+IDPExtensions.m"; sourceTree = "<group>"; };
+		1037E8351EC09A8E0024AFCC /* IDPEnterprise.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IDPEnterprise.h; sourceTree = "<group>"; };
+		1037E8361EC09A8E0024AFCC /* IDPEnterprise.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IDPEnterprise.m; sourceTree = "<group>"; };
+		1037E8381EC09A9B0024AFCC /* IDPEnterpriseTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IDPEnterpriseTest.h; sourceTree = "<group>"; };
+		1037E8391EC09A9B0024AFCC /* IDPEnterpriseTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IDPEnterpriseTest.m; sourceTree = "<group>"; };
 		10A54D801EB9C70D003F2BFD /* TestObjC */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = TestObjC; sourceTree = BUILT_PRODUCTS_DIR; };
 		10A54D831EB9C70D003F2BFD /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		10FF6F381EBC5DEB00C6E9A4 /* IDPAdministration.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IDPAdministration.h; sourceTree = "<group>"; };
@@ -82,8 +93,6 @@
 		10FF6F6B1EBC5DEB00C6E9A4 /* NSString+IDPAlphabet.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSString+IDPAlphabet.m"; sourceTree = "<group>"; };
 		10FF6F6C1EBC5DEB00C6E9A4 /* NSString+IDPRandomString.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSString+IDPRandomString.h"; sourceTree = "<group>"; };
 		10FF6F6D1EBC5DEB00C6E9A4 /* NSString+IDPRandomString.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSString+IDPRandomString.m"; sourceTree = "<group>"; };
-		10FF6F841EBCBB5700C6E9A4 /* IDPMoneyProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IDPMoneyProtocol.h; sourceTree = "<group>"; };
-		10FF6F851EBCBB6400C6E9A4 /* IDPTakeMoneyProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IDPTakeMoneyProtocol.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +106,34 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1037E82D1EC0775C0024AFCC /* Enterprise */ = {
+			isa = PBXGroup;
+			children = (
+				1037E8341EC09A8E0024AFCC /* IDPEnterprise */,
+				1037E8371EC09A8E0024AFCC /* IDPEnterpriseTest */,
+			);
+			name = Enterprise;
+			path = Carwash/Enterprise;
+			sourceTree = "<group>";
+		};
+		1037E8341EC09A8E0024AFCC /* IDPEnterprise */ = {
+			isa = PBXGroup;
+			children = (
+				1037E8351EC09A8E0024AFCC /* IDPEnterprise.h */,
+				1037E8361EC09A8E0024AFCC /* IDPEnterprise.m */,
+			);
+			path = IDPEnterprise;
+			sourceTree = "<group>";
+		};
+		1037E8371EC09A8E0024AFCC /* IDPEnterpriseTest */ = {
+			isa = PBXGroup;
+			children = (
+				1037E8381EC09A9B0024AFCC /* IDPEnterpriseTest.h */,
+				1037E8391EC09A9B0024AFCC /* IDPEnterpriseTest.m */,
+			);
+			path = IDPEnterpriseTest;
+			sourceTree = "<group>";
+		};
 		10A54D771EB9C70D003F2BFD = {
 			isa = PBXGroup;
 			children = (
@@ -126,6 +163,7 @@
 			isa = PBXGroup;
 			children = (
 				10FF6F351EBC5DEB00C6E9A4 /* Carwash */,
+				1037E82D1EC0775C0024AFCC /* Enterprise */,
 				10FF6F581EBC5DEB00C6E9A4 /* Category */,
 				10FF6F811EBCB5A200C6E9A4 /* Protocols */,
 				10FF6F5B1EBC5DEB00C6E9A4 /* Creature */,
@@ -279,6 +317,8 @@
 			children = (
 				10FF6F591EBC5DEB00C6E9A4 /* NSObject+IDPExtension.h */,
 				10FF6F5A1EBC5DEB00C6E9A4 /* NSObject+IDPExtension.m */,
+				1037E8311EC07AAA0024AFCC /* NSArray+IDPExtensions.h */,
+				1037E8321EC07AAA0024AFCC /* NSArray+IDPExtensions.m */,
 			);
 			path = Category;
 			sourceTree = "<group>";
@@ -323,8 +363,8 @@
 		10FF6F811EBCB5A200C6E9A4 /* Protocols */ = {
 			isa = PBXGroup;
 			children = (
-				10FF6F841EBCBB5700C6E9A4 /* IDPMoneyProtocol.h */,
-				10FF6F851EBCBB6400C6E9A4 /* IDPTakeMoneyProtocol.h */,
+				1037E82B1EC068EA0024AFCC /* IDPMoney.h */,
+				1037E82C1EC068EA0024AFCC /* IDPMoneyTransfer.h */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -387,7 +427,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1037E83A1EC09A9B0024AFCC /* IDPEnterpriseTest.m in Sources */,
 				10FF6F7E1EBC5E5900C6E9A4 /* IDPCar.m in Sources */,
+				1037E83B1EC09CE40024AFCC /* IDPEnterprise.m in Sources */,
 				10FF6F761EBC5E3A00C6E9A4 /* IDPCreature.m in Sources */,
 				10FF6F7C1EBC5E5200C6E9A4 /* IDPDirector.m in Sources */,
 				10FF6F7A1EBC5E4A00C6E9A4 /* IDPWasher.m in Sources */,
@@ -406,6 +448,7 @@
 				10FF6F6E1EBC5E0A00C6E9A4 /* IDPCreature2.m in Sources */,
 				10FF6F6F1EBC5E1800C6E9A4 /* IDPAdministration.m in Sources */,
 				10FF6F781EBC5E4300C6E9A4 /* IDPRoom.m in Sources */,
+				1037E8331EC07AAA0024AFCC /* NSArray+IDPExtensions.m in Sources */,
 				10FF6F741EBC5E3100C6E9A4 /* IDPCreature2Test.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -8,32 +8,36 @@
 
 #import <Foundation/Foundation.h>
 
-#import "IDPMoneyProtocol.h"
-#import "IDPTakeMoneyProtocol.h"
+#import "IDPMoney.h"
+#import "IDPMoneyTransfer.h"
 
 typedef NS_ENUM(NSUInteger, IDPEmployeeState) {
     IDPEmployeeStateFree,
     IDPEmployeeStateBusy
 };
 
-@interface IDPEmployee : NSObject <IDPMoneyProtocol, IDPTakeMoneyProtocol>
+@interface IDPEmployee : NSObject <IDPMoneyTransfer, IDPMoney>
 @property (nonatomic, copy)     NSString            *name;
 @property (nonatomic, assign)   NSUInteger          experience;
 @property (nonatomic, assign)   NSUInteger          salary;
-//@property (nonatomic, assign)   NSUInteger          money;
+@property (nonatomic, assign)   NSUInteger          money;
 @property (nonatomic, assign)   IDPEmployeeState    state;
 
++ (instancetype)employeeWithName:(NSString *)name;
 + (instancetype)employeeWithName:(NSString *)name
                       experience:(NSUInteger)experience
                           salary:(NSUInteger)salary
                            money:(NSUInteger)money;
 
 - (instancetype)init;
+- (instancetype)initWithName:(NSString *)name;
 - (instancetype)initWithName:(NSString *)name
                   experience:(NSUInteger)experience
                       salary:(NSUInteger)salary
                        money:(NSUInteger)money NS_DESIGNATED_INITIALIZER;
 
+- (void)takeMoney:(NSUInteger)money fromObject:(id<IDPMoney>)object;
+- (void)processObject:(id<IDPMoney>)object;
 - (void)performWorkWithObject:(id)object;
 
 @end

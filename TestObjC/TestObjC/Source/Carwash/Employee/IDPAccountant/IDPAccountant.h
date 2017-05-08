@@ -12,4 +12,6 @@
 
 @interface IDPAccountant : IDPEmployee
 
+- (void)calculateMoney:(NSUInteger)money;
+
 @end

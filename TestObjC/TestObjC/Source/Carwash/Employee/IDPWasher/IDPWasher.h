@@ -9,13 +9,11 @@
 #import <Foundation/Foundation.h>
 
 #import "IDPEmployee.h"
-//#import "IDPMoneyProtocol.h"
 
 @class IDPCar;
 
-@interface IDPWasher : IDPEmployee /* <IDPMoneyProtocol> */
-@property (nonatomic, assign)   NSUInteger  price;
+@interface IDPWasher : IDPEmployee
 
-//- (void)washCar:(IDPCar *)car;
+- (void)washCar:(IDPCar *)car;
 
 @end

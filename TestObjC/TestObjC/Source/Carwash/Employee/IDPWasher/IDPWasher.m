@@ -10,25 +10,13 @@
 
 #import "IDPCar.h"
 
-@interface IDPWasher ()
-
-- (BOOL)checkCarMoney:(IDPCar *)car;
-
-@end
-
 @implementation IDPWasher
 
 #pragma mark -
 #pragma mark Overridden
 
 - (void)performWorkWithObject:(IDPCar *)car {
-    if ([self checkCarMoney:car]) {
-        [self washCar:car];
-        
-        NSLog(@"Car %@ has been washed", car.model);
-    } else {
-        NSLog(@"Car %@ has not enough money", car.model);
-    }
+    [self washCar:car];
 }
 
 #pragma mark -
@@ -36,15 +24,10 @@
 
 - (void)washCar:(IDPCar *)car {
     if (car) {
-        [self takeMoney:self.price fromObject:car];
+        car.state = IDPCarStateClean;
+        
+        NSLog(@"Washer %@ washed car %@", self.name, car.model);
     }
-}
-
-#pragma mark -
-#pragma mark Private
-
-- (BOOL)checkCarMoney:(IDPCar *)car {
-    return car.money >= self.price;
 }
 
 @end
