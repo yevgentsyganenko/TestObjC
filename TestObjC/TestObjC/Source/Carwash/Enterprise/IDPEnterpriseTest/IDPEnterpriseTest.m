@@ -17,7 +17,7 @@
 
 static const NSUInteger IDPCarsCount = 10;
 
-void testCarwashWithCarsCount(NSUInteger carsCount) {
+void IDPTestCarwashWithCarsCount(NSUInteger carsCount) {
     IDPEnterprise *carwash = [IDPEnterprise object];
     
     for (NSUInteger index = 0; index < IDPCarsCount; index++) {

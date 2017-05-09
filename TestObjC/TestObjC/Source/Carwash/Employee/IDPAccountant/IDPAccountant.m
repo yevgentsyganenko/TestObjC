@@ -16,7 +16,7 @@
 #pragma mark Overridden
 
 - (void)performWorkWithObject:(IDPWasher *)washer {
-    [self calculateMoney:washer.money];
+    [self calculateMoney:self.money];
 }
 
 #pragma mark -

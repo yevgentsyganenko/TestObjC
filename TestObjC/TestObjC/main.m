@@ -16,7 +16,7 @@ int main(int argc, const char * argv[]) {
     @autoreleasepool {
 //        [IDPCreatureTest performTest];
 //        [IDPCreature2Test performTest];
-        testCarwashWithCarsCount(10);
+        IDPTestCarwashWithCarsCount(10);
     }
     
     return 0;

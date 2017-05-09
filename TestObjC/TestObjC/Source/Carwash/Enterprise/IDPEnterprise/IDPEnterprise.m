@@ -14,6 +14,11 @@
 #import "IDPDirector.h"
 #import "IDPCar.h"
 
+#import "IDPCarwash.h"
+#import "IDPAdministration.h"
+#import "IDPCarwashRoom.h"
+#import "IDPRoom.h"
+
 #import "NSArray+IDPExtensions.h"
 #import "NSString+IDPRandomString.h"
 #import "NSString+IDPAlphabet.h"
@@ -86,7 +91,22 @@ static const NSUInteger IDPWorkersCount     = 3;
 #pragma mark Private
 
 - (void)prepareBuildings {
+    IDPAdministration *administrationBuilding = [IDPAdministration buildingWithRoomsAmount:1];
+    IDPCarwash *carwashBuilding = [IDPCarwash buildingWithRoomsAmount:1];
     
+    IDPRoom *administrationRoom = [IDPRoom roomWithPeopleCapacity:2];
+    IDPCarwashRoom *carwashRoom = [IDPCarwashRoom roomWithPeopleCapacity:1 carsCapacity:1];
+    
+    IDPWasher *washer = [self freeEmployeeOfClass:[IDPWasher class]];
+    IDPAccountant *accountant = [self freeEmployeeOfClass:[IDPAccountant class]];
+    IDPDirector *director = [self freeEmployeeOfClass:[IDPDirector class]];
+    
+    [administrationBuilding addRoom:administrationRoom];
+    [carwashBuilding addCarwashRoom:carwashRoom];
+    
+    [administrationRoom addPerson:accountant];
+    [administrationRoom addPerson:director];
+    [carwashRoom addPerson:washer];
 }
 
 - (void)prepareStaff {

@@ -8,4 +8,4 @@
 
 #import <Foundation/Foundation.h>
 
-void testCarwashWithCarsCount(NSUInteger carsCount);
+void IDPTestCarwashWithCarsCount(NSUInteger carsCount);

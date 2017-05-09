@@ -34,7 +34,7 @@ static const NSUInteger IDPDefaultCharactersLength = 10;
         [result appendFormat:@"%c", [alphabet characterAtIndex:arc4random_uniform((uint32_t)count)]];
     }
     
-    return [result copy];
+    return [[result copy] autorelease];
 }
 
 @end
