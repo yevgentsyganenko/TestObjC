@@ -69,11 +69,42 @@
 }
 
 #pragma mark -
+#pragma mark IDPObserver
+
+- (SEL)selectorForState:(IDPEmployeeState)state {
+    switch (state) {
+        case IDPEmployeeStateBusy:
+            return NULL;
+            
+        case IDPEmployeeStateFree:
+            return @selector(employeeDidBecomeFree:);
+            
+        case IDPEmployeeStateReadyForProcessing:
+            return @selector(employeeDidFinishWork:);
+    }
+    
+    return NULL;
+}
+
+#pragma mark -
+#pragma mark IDPEmployeeObserver
+
+- (void)employeeDidFinishWork:(IDPEmployee *)employee {
+    [self processObject:employee];
+    
+    employee.state = IDPEmployeeStateFree;
+}
+
+#pragma mark -
 #pragma mark Public
 
 - (void)processObject:(id<IDPMoney>)object {
+    self.state = IDPEmployeeStateBusy;
+
     [self takeMoney:object.money fromObject:object];
     [self performWorkWithObject:object];
+    
+    self.state = IDPEmployeeStateReadyForProcessing;
 }
 
 - (void)performWorkWithObject:(id)object {

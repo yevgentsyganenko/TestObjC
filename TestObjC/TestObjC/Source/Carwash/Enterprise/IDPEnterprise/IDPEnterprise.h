@@ -8,13 +8,18 @@
 
 #import <Foundation/Foundation.h>
 
+#import "IDPEmployeeObserver.h"
+#import "IDPEmployee.h"
+
 @class IDPCar;
 
-@interface IDPEnterprise : NSObject
+@interface IDPEnterprise : NSObject <IDPEmployeeObserver>
 
 - (void)addCar:(IDPCar *)car;
 - (void)removeCar:(IDPCar *)car;
 
 - (void)runCarwash;
+
+- (SEL)selectorForState:(IDPEmployeeState)state;;
 
 @end

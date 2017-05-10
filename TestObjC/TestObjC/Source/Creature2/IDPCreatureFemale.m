@@ -8,7 +8,7 @@
 
 #import "IDPCreatureFemale.h"
 
-#import "NSObject+IDPExtension.h"
+#import "NSObject+IDPExtensions.h"
 
 @interface IDPCreatureFemale ()
 

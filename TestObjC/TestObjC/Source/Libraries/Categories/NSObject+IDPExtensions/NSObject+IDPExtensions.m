@@ -1,12 +1,12 @@
 //
-//  NSObject+IDPExtension.m
+//  NSObject+IDPExtensions.m
 //  TestObjC
 //
 //  Created by Genek on 5/4/17.
 //  Copyright © 2017 Genek. All rights reserved.
 //
 
-#import "NSObject+IDPExtension.h"
+#import "NSObject+IDPExtensions.h"
 
 #import "NSArray+IDPExtensions.h"
 

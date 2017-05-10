@@ -8,7 +8,7 @@
 
 #import "IDPCreature.h"
 
-#import "NSObject+IDPExtension.h"
+#import "NSObject+IDPExtensions.h"
 
 static NSString * const _Nonnull IDPCreatureDescriptionFormatString     = @"IDPCreature: Gender: %s, Name: %@, Age: %lu Weight: %lu";
 

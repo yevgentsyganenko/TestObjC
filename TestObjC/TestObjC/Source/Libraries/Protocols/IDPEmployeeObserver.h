@@ -8,9 +8,13 @@
 
 #import <Foundation/Foundation.h>
 
+#import "IDPObserver.h"
+
 @class IDPEmployee;
 
-@protocol IDPEmployeeObserver <NSObject>
+@protocol IDPEmployeeObserver <IDPObserver>
+
+@optional
 
 - (void)employeeDidFinishWork:(IDPEmployee *)employee;
 - (void)employeeDidBecomeFree:(IDPEmployee *)employee;

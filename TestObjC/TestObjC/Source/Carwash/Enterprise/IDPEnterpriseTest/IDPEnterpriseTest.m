@@ -11,7 +11,7 @@
 #import "IDPEnterprise.h"
 #import "IDPCar.h"
 
-#import "NSObject+IDPExtension.h"
+#import "NSObject+IDPExtensions.h"
 #import "NSString+IDPRandomString.h"
 #import "NSString+IDPAlphabet.h"
 

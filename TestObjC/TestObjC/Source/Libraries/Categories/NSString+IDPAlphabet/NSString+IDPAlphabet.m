@@ -8,7 +8,7 @@
 
 #import "NSString+IDPAlphabet.h"
 
-#import "NSObject+IDPExtension.h"
+#import "NSObject+IDPExtensions.h"
 
 @interface NSString ()
 

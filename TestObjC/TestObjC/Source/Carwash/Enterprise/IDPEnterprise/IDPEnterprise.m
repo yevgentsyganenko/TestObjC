@@ -8,7 +8,7 @@
 
 #import "IDPEnterprise.h"
 
-#import "IDPEmployee.h"
+//#import "IDPEmployee.h"
 #import "IDPWasher.h"
 #import "IDPAccountant.h"
 #import "IDPDirector.h"
@@ -76,14 +76,50 @@ static const NSUInteger IDPWorkersCount     = 3;
 }
 
 - (void)runCarwash {
+    IDPCar *car = [self.mutableCars firstObject];
+    IDPWasher *washer = [self freeEmployeeOfClass:[IDPWasher class]];
+    if (car) {
+        <#statements#>
+    }
     for (IDPCar *car in self.mutableCars) {
         IDPWasher *washer = [self freeEmployeeOfClass:[IDPWasher class]];
-        IDPAccountant *accountant = [self freeEmployeeOfClass:[IDPAccountant class]];
-        IDPDirector *director = [self freeEmployeeOfClass:[IDPDirector class]];
+//        IDPAccountant *accountant = [self freeEmployeeOfClass:[IDPAccountant class]];
+//        IDPDirector *director = [self freeEmployeeOfClass:[IDPDirector class]];
         
         [washer processObject:car];
-        [accountant processObject:washer];
-        [director processObject:accountant];
+//        [accountant processObject:washer];
+//        [director processObject:accountant];
+        
+        [self removeCar:car];
+    }
+}
+
+#pragma mark -
+#pragma mark IDPObserver
+
+- (SEL)selectorForState:(IDPEmployeeState)state {
+    switch (state) {
+        case IDPEmployeeStateBusy:
+            return NULL;
+            
+        case IDPEmployeeStateFree:
+            return @selector(employeeDidBecomeFree:);
+            
+        case IDPEmployeeStateReadyForProcessing:
+            return NULL;
+    }
+    
+    return NULL;
+}
+
+#pragma mark -
+#pragma mark IDPEmployeeObserver
+
+- (void)employeeDidBecomeFree:(IDPWasher *)washer {
+    IDPCar *car = [self.mutableCars firstObject];
+    if (car) {
+        [self removeCar:car];
+        [washer processObject:car];
     }
 }
 
@@ -122,6 +158,10 @@ static const NSUInteger IDPWorkersCount     = 3;
     IDPWasher *washer = [IDPWasher employeeWithName:names[0]];
     IDPAccountant *accountant = [IDPAccountant employeeWithName:names[1]];
     IDPDirector *director = [IDPDirector employeeWithName:names[2]];
+    
+    [washer addObserver:accountant];
+    [washer addObserver:self];
+    [accountant addObserver:director];
         
     [self.mutableWorkers addObjectsFromArray:@[washer, accountant, director]];
 }

@@ -1,5 +1,5 @@
 //
-//  NSObject+IDPExtension.h
+//  NSObject+IDPExtensions.h
 //  TestObjC
 //
 //  Created by Genek on 5/4/17.
